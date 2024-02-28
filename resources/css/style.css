@@ -483,13 +483,13 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
+  background: url("resources/img/hero/hero.jpg") top center;
   background-size: cover;
   position: relative;
 }
 
 #hero:before {
   content: "";
-  background: url("resources/img/hero/hero.jpg") top center;
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;

@@ -63,13 +63,17 @@
     }
 
     /**
-     * future-plans slider
+     * Init swiper slider for future plans section
      */
     new Swiper('.future-plans-slider', {
-        speed: 600,
+        speed: 1600,
         loop: true,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+          },
         autoplay: {
-            delay: 5000,
+            delay: 15000,
             disableOnInteraction: false
         },
         slidesPerView: 'auto',
@@ -84,12 +88,65 @@
                 spaceBetween: 20
             },
 
-            1200: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            }
+            // 1200: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20
+            // }
         }
     });
+
+
+/**
+ * Init swiper slider for events section
+ */
+ new Swiper('.events-slider', {
+    speed: 1600,
+    loop: true,
+    grabCursor: true,
+        keyboard: {
+            enabled: true,
+          },
+    autoplay: {
+        delay: 15000,
+        disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
+
+/**
+ * Init swiper slider for news section
+ */
+ new Swiper('.news-slider', {
+    speed: 1600,
+    loop: true,
+    grabCursor: true,
+        keyboard: {
+            enabled: true,
+          },
+    autoplay: {
+        delay: 15000,
+        disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
 
     /**
      * Animation on scroll
@@ -98,7 +155,7 @@
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
-            once: true,
+            once: false,
             mirror: false
         })
     });
@@ -109,95 +166,6 @@
     new PureCounter();
 
 })()
-
-
-/**
- * Init swiper slider with 1 slide at once in desktop view
- */
-new Swiper('.slides-1', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    }
-});
-
-/**
- * Init swiper slider with 3 slides at once in desktop view
- */
-new Swiper('.slides-3', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 40
-        },
-
-        1200: {
-            slidesPerView: 3,
-        }
-    }
-});
-
-/**
- * future-plans slider
- */
-new Swiper('.future-plans-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-
-        1200: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        }
-    }
-});
-
-
-
-
-
 
 /**
  * Sticky Header on Scroll
@@ -300,56 +268,12 @@ navDropdowns.forEach(el => {
         }
     })
 });
-/**
- * Init swiper slider with 1 slide at once in desktop view
- */
-new Swiper('.slides-1', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    }
-});
 
-/**
- * Init swiper slider with 3 slides at once in desktop view
- */
-new Swiper('.slides-3', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 40
-        },
-
-        1200: {
-            slidesPerView: 3,
-        }
+var typed = new Typed(".auto-type", {
+        strings: ["Welcome to Our School!", "Mental Health Our Priority"],
+        typeSpeed: 150,
+        backSpeed: 50,
+        loop: true
     }
-});
+
+)
